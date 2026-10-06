@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --latar: #070817;
+  --panel: #0f1130;
+  --aksen: #f97316;
+  --biru: #3b4cff;
+}
+
+html,
+body {
+  background:
+    radial-gradient(1100px 600px at 12% -10%, rgba(59, 76, 255, 0.35), transparent 60%),
+    radial-gradient(900px 500px at 92% 0%, rgba(249, 115, 22, 0.18), transparent 55%),
+    var(--latar);
+  background-attachment: fixed;
+  color: #e8ebff;
+}
+
+::selection {
+  background: rgba(249, 115, 22, 0.35);
+}
+
+.kaca {
+  background: linear-gradient(160deg, rgba(31, 36, 92, 0.75), rgba(10, 12, 36, 0.8));
+  border: 1px solid rgba(123, 138, 255, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.garis-oranye {
+  background: linear-gradient(90deg, #f97316, #fb923c, #3b4cff);
+}
+
+.scroll-halus::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.scroll-halus::-webkit-scrollbar-thumb {
+  background: rgba(123, 138, 255, 0.35);
+  border-radius: 99px;
+}
+
+@keyframes naik {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animasi-naik {
+  animation: naik 0.45s ease both;
+}
